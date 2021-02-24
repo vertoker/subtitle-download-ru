@@ -15,11 +15,19 @@ def TextFormater(caption):
     timeStart = Time("00:00:00,000")
     timeEnd = Time("00:00:00,000")
     isParagraph = False
+    inBracket = False
     counter = 0
     line = ''
     for i in caption:
         if i != "\n":
-            line += i
+            #if i == '[':
+                #inBracket = True
+            
+            if not inBracket:
+                line += i
+            
+            #if i == ']':
+                #inBracket = False
         else:
             counter += 1
             if counter % 4 == 2:
@@ -81,7 +89,8 @@ print('\nСубтитры загружены')
 if caption != 'Субтитры отсутствуют':
     result = TextFormater(caption)
     path = os.path.join(os.getcwd(), name + '.txt')
-    path2 = os.path.join('C:\\Users\\Администратор\\Desktop', yt.title + '.txt')
-    open(path, 'w').write(result)
+    path2 = os.path.join('C:\\Users\\The Witcher\\Desktop', name + '.txt')
+    path3 = os.path.join('C:\\Users\Eduard\\OneDrive\\Рабочий стол', name + '.txt')
+    open(path2, 'w').write(result)
     print('Субтитры записаны')
 input('Нажмите Enter ')
