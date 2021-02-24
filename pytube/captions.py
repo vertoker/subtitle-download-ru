@@ -10,7 +10,7 @@ from typing import Optional
 from pytube import request
 from pytube.helpers import safe_filename
 from pytube.helpers import target_directory
-import warnings
+
 
 class Caption:
     """Container for caption tracks."""
@@ -21,7 +21,6 @@ class Caption:
         :param dict caption_track:
             Caption track data extracted from ``watch_html``.
         """
-        warnings.simplefilter("ignore")
         self.url = caption_track.get("baseUrl")
         self.name = caption_track["name"]["simpleText"]
         # Use "vssId" instead of "languageCode", fix issue #779
