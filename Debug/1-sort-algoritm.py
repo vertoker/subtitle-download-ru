@@ -13,7 +13,7 @@ def Time(time):
     meleeseconds = int(time[9:12])
     return hours * 3600 + minutes * 60 + seconds + meleeseconds / 1000
 
-def TextFormater(caption):
+def TextFormaterDebug(caption):
     result = yt.title + '\n'
     
     startTimings = []
@@ -31,11 +31,7 @@ def TextFormater(caption):
                 startTimings.append(Time(line[:12]))
                 endTimings.append(Time(line[-12:]))
             if counter % 4 == 3:
-                if line[0] == '[' or line[-1] == ']':
-                    startTimings.pop()
-                    endTimings.pop()
-                else:
-                    lines.append(line)
+                lines.append(line)
             line = ''
     
     lines[0] = ReplaceLetter(lines[0], lines[0][0].upper(), 0) + ' '
@@ -66,7 +62,7 @@ def TextFormater(caption):
     return result
 
 warnings.filterwarnings("ignore")
-link = input('Введите ссылку на видео: ')
+link = 'https://www.youtube.com/watch?v=IFbP_YPVXjA'
 caption = 'Субтитры отсутствуют'
 yt = YouTube(link)
 
@@ -76,20 +72,6 @@ for char in block_list:
     name = name.replace(char, '')
 print(yt.captions.all())
 
-#Английские авто-субтитры
-try:
-    caption_aen = yt.captions.get_by_language_code('a.en')
-    caption = caption_aen.generate_srt_captions()
-    print('Английские авто-субтитры имеются')
-except:
-    print('Английские авто-субтитры отсутствуют')
-#Английские субтитры
-try:
-    caption_en = yt.captions.get_by_language_code('en')
-    caption = caption_en.generate_srt_captions()
-    print('Английские субтитры имеются')
-except:
-    print('Английские субтитры отсутствуют')
 #Русские авто-субтитры
 try:
     caption_aru = yt.captions.get_by_language_code('a.ru')
@@ -97,20 +79,13 @@ try:
     print('Русские авто-субтитры имеются')
 except:
     print('Русские авто-субтитры отсутствуют')
-#Русские субтитры
-try:
-    caption_ru = yt.captions.get_by_language_code('ru')
-    caption = caption_ru.generate_srt_captions()
-    print('Русские субтитры имеются')
-except:
-    print('Русские субтитры отсутствуют')
 print('\nСубтитры загружены')
 
 if caption != 'Субтитры отсутствуют':
-    result = TextFormater(caption)
+    result = TextFormaterDebug(caption)
     path = os.path.join(os.getcwd(), name + '.txt')
     path2 = os.path.join('C:\\Users\\The Witcher\\Desktop', name + '.txt')
     path3 = os.path.join('C:\\Users\Eduard\\OneDrive\\Рабочий стол', name + '.txt')
-    open(path3, 'w').write(result)
+    open(path, 'w').write(result)
     print('Субтитры записаны')
 input('Нажмите Enter ')
