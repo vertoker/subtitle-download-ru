@@ -91,6 +91,6 @@ if caption != 'Субтитры отсутствуют':
     path = os.path.join(os.getcwd(), name + '.txt')
     path2 = os.path.join('C:\\Users\\The Witcher\\Desktop', name + '.txt')
     path3 = os.path.join('C:\\Users\Eduard\\OneDrive\\Рабочий стол', name + '.txt')
-    open(path2, 'w').write(result)
+    open(path3, 'w').write(result)
     print('Субтитры записаны')
 input('Нажмите Enter ')
