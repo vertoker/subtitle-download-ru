@@ -1,0 +1,1 @@
+start .\Lib\site-packages\main.py
