@@ -1,1 +1,1 @@
-start .\Lib\site-packages\main.py
+start .\Lib\site-packages\main.pyw
