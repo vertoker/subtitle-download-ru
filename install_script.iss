@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Конвертация видео в статью"
-#define MyAppVersion "1.0.1"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "LiMiDyFy"
 #define MyAppURL "https://www.example.com/"
 #define MyAppExeName "open.bat"
@@ -39,8 +39,8 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "B:\PythonProjects\Скачивание субтитров\main\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "B:\PythonProjects\Скачивание субтитров\main\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "E:\PythonProjects\Скачивание субтитров\main\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\PythonProjects\Скачивание субтитров\main\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
