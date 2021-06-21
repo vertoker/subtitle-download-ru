@@ -39,8 +39,8 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "E:\PythonProjects\Скачивание субтитров\main\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\PythonProjects\Скачивание субтитров\main\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "E:\PythonProjects\Subtitle Download\main\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\PythonProjects\Subtitle Download\main\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
