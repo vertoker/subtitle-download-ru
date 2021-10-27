@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Конвертация видео в статью"
-#define MyAppVersion "1.0.2"
+#define MyAppVersion "1.0.3"
 #define MyAppPublisher "LiMiDyFy"
 #define MyAppURL "https://www.example.com/"
 #define MyAppExeName "open.bat"
